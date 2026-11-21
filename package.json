@@ -1,0 +1,16 @@
+{
+  "name": "gestion-stock-electromenager",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "apps/api",
+    "apps/web"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev -w @stock/api\" \"npm run dev -w @stock/web\"",
+    "build": "npm run build -w @stock/api && npm run build -w @stock/web"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
